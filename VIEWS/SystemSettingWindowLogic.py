@@ -4,13 +4,17 @@ from VIEWS.UserManageWindowLogic import UserManageWindowLogicClass
 from VIEWS.SystemSettingEditWindowLogic import SystemSettingEditWindowLogicClass
 import sys
 import SERVICES.med_hostsetting_services
-from MODELS.medmodels import MedHostsetting
+from MODELS.MedDoriconModels import MedHostsetting
 
 class SystemSettingWindowLogicClass(QtWidgets.QMainWindow):
     def __init__(self):
         super(SystemSettingWindowLogicClass,self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        self.ui.btn_add.clicked.connect(self.refreshData)
+        self.ui.btn_add.clicked.connect(self.AddSettingItem)
+
         self.setTableViewStyle()
         self.refreshData()
 
@@ -22,6 +26,12 @@ class SystemSettingWindowLogicClass(QtWidgets.QMainWindow):
         self.ui.tableView.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
 
         self.ui.tableView.doubleClicked.connect(self.TableViewSelectioned)
+
+    def AddSettingItem(self):
+        self.EditWindow = SystemSettingEditWindowLogicClass(None)
+        self.EditWindow.setModal(True)
+        self.EditWindow.Signal_Update.connect(self.refreshData)
+        self.EditWindow.show()
 
     def TableViewSelectioned(self):
         index = self.ui.tableView.currentIndex().row()

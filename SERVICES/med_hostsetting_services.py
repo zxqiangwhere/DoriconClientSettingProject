@@ -1,5 +1,5 @@
 from DB_HELPER_PACKAGE.dbfactory import get_session
-from MODELS import medmodels
+from MODELS import MedDoriconModels
 
 
 class host_setting_service:
@@ -21,9 +21,9 @@ class host_setting_service:
         :return: med_hostting list
         '''
         if  setting_key !='':
-            items = self.session.query(medmodels.MedHostsetting).filter(medmodels.MedHostsetting.setting_key == setting_key).all()
+            items = self.session.query(MedDoriconModels.MedHostsetting).filter(MedDoriconModels.MedHostsetting.setting_key == setting_key).all()
         else:
-            items = self.session.query(medmodels.MedHostsetting).all()
+            items = self.session.query(MedDoriconModels.MedHostsetting).all()
         return items
 
     def add(self,item):

@@ -38,6 +38,7 @@ class Ui_Dialog(object):
         self.horizontalLayout.addWidget(self.label_2)
         self.lineEdit_Psw = QtWidgets.QLineEdit(self.widget1)
         self.lineEdit_Psw.setObjectName("lineEdit_Psw")
+        self.lineEdit_Psw.setEchoMode(QtWidgets.QLineEdit.Password)
         self.horizontalLayout.addWidget(self.lineEdit_Psw)
         self.widget2 = QtWidgets.QWidget(Dialog)
         self.widget2.setGeometry(QtCore.QRect(90, 54, 183, 22))
