@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>871</width>
+    <height>645</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QMdiArea" name="mdiArea">
+        <property name="viewMode">
+         <enum>QMdiArea::TabbedView</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>871</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>字典管理</string>
+    </property>
+    <addaction name="actionSystemSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionDeptDict"/>
+    <addaction name="separator"/>
+    <addaction name="actionImageDict"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>用户管理</string>
+    </property>
+    <addaction name="actionUserManage"/>
+    <addaction name="separator"/>
+    <addaction name="actionUserAuthor"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>手术室管理</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionXITONG_SHEZHI">
+   <property name="text">
+    <string>XITONG SHEZHI </string>
+   </property>
+  </action>
+  <action name="actionSystemSetting">
+   <property name="text">
+    <string>系统设置</string>
+   </property>
+  </action>
+  <action name="actionTuichu">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionDeptDict">
+   <property name="text">
+    <string>科室字典</string>
+   </property>
+  </action>
+  <action name="actionImageDict">
+   <property name="text">
+    <string>图片字典</string>
+   </property>
+  </action>
+  <action name="actionUserManage">
+   <property name="text">
+    <string>用户管理</string>
+   </property>
+  </action>
+  <action name="actionUserAuthor">
+   <property name="text">
+    <string>用户授权</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

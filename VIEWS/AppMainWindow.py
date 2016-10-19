@@ -1,0 +1,93 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'AppMainWindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.6
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(871, 645)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetMaximumSize)
+        self.gridLayout.setSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.mdiArea = QtWidgets.QMdiArea(self.centralwidget)
+        self.mdiArea.setViewMode(QtWidgets.QMdiArea.TabbedView)
+        self.mdiArea.setObjectName("mdiArea")
+        self.gridLayout.addWidget(self.mdiArea, 0, 0, 1, 1)
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 871, 23))
+        self.menubar.setObjectName("menubar")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        self.menu.setObjectName("menu")
+        self.menu_2 = QtWidgets.QMenu(self.menubar)
+        self.menu_2.setObjectName("menu_2")
+        self.menu_3 = QtWidgets.QMenu(self.menubar)
+        self.menu_3.setObjectName("menu_3")
+        self.menu_4 = QtWidgets.QMenu(self.menubar)
+        self.menu_4.setObjectName("menu_4")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionXITONG_SHEZHI = QtWidgets.QAction(MainWindow)
+        self.actionXITONG_SHEZHI.setObjectName("actionXITONG_SHEZHI")
+        self.actionSystemSetting = QtWidgets.QAction(MainWindow)
+        self.actionSystemSetting.setObjectName("actionSystemSetting")
+        self.actionTuichu = QtWidgets.QAction(MainWindow)
+        self.actionTuichu.setObjectName("actionTuichu")
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.actionDeptDict = QtWidgets.QAction(MainWindow)
+        self.actionDeptDict.setObjectName("actionDeptDict")
+        self.actionImageDict = QtWidgets.QAction(MainWindow)
+        self.actionImageDict.setObjectName("actionImageDict")
+        self.actionUserManage = QtWidgets.QAction(MainWindow)
+        self.actionUserManage.setObjectName("actionUserManage")
+        self.actionUserAuthor = QtWidgets.QAction(MainWindow)
+        self.actionUserAuthor.setObjectName("actionUserAuthor")
+        self.menu.addAction(self.actionExit)
+        self.menu_2.addAction(self.actionSystemSetting)
+        self.menu_2.addSeparator()
+        self.menu_2.addAction(self.actionDeptDict)
+        self.menu_2.addSeparator()
+        self.menu_2.addAction(self.actionImageDict)
+        self.menu_3.addAction(self.actionUserManage)
+        self.menu_3.addSeparator()
+        self.menu_3.addAction(self.actionUserAuthor)
+        self.menubar.addAction(self.menu.menuAction())
+        self.menubar.addAction(self.menu_2.menuAction())
+        self.menubar.addAction(self.menu_3.menuAction())
+        self.menubar.addAction(self.menu_4.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.actionExit.triggered.connect(MainWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.menu.setTitle(_translate("MainWindow", "文件"))
+        self.menu_2.setTitle(_translate("MainWindow", "字典管理"))
+        self.menu_3.setTitle(_translate("MainWindow", "用户管理"))
+        self.menu_4.setTitle(_translate("MainWindow", "手术室管理"))
+        self.actionXITONG_SHEZHI.setText(_translate("MainWindow", "XITONG SHEZHI "))
+        self.actionSystemSetting.setText(_translate("MainWindow", "系统设置"))
+        self.actionTuichu.setText(_translate("MainWindow", "Exit"))
+        self.actionExit.setText(_translate("MainWindow", "退出"))
+        self.actionDeptDict.setText(_translate("MainWindow", "科室字典"))
+        self.actionImageDict.setText(_translate("MainWindow", "图片字典"))
+        self.actionUserManage.setText(_translate("MainWindow", "用户管理"))
+        self.actionUserAuthor.setText(_translate("MainWindow", "用户授权"))
+
